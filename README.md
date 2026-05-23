@@ -50,6 +50,12 @@ With CMake:
 ctest --test-dir build
 ```
 
+On Windows, use the MSYS2 helper scripts documented in [docs/local-dev.md](docs/local-dev.md):
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\local-ci.ps1
+```
+
 ## Intended Trace Format
 
 Each non-comment line is one memory operation:
