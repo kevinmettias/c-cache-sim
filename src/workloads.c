@@ -1,1 +1,1 @@
-/* Workload generator implementation goes here. */
+typedef int Workloads_Module;
