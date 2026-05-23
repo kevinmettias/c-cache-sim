@@ -1,0 +1,1 @@
+/* Workload generator implementation goes here. */
