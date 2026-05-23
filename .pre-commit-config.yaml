@@ -1,0 +1,15 @@
+repos:
+  - repo: local
+    hooks:
+      - id: clang-format
+        name: clang-format
+        entry: clang-format -i
+        language: system
+        files: \.(c|h)$
+
+      - id: cppcheck
+        name: cppcheck
+        entry: cppcheck --enable=warning,style,performance,portability --std=c11 --inline-suppr --quiet
+        language: system
+        files: \.(c|h)$
+        pass_filenames: false

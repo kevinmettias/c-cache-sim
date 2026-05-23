@@ -37,7 +37,8 @@ TraceEvent trace_event;
 Enum types use PascalCase. Enum values use the enum type as a prefix, followed by an underscore and a PascalCase value:
 
 ```c
-typedef enum TraceOp {
+typedef enum TraceOp
+{
     TraceOp_Read = 0,
     TraceOp_Write = 1
 } TraceOp;
@@ -73,7 +74,8 @@ typedef struct CacheSim CacheSim;
 Keep simple value structs public when callers need to construct or inspect them directly:
 
 ```c
-typedef struct CacheConfig {
+typedef struct CacheConfig
+{
     uint64_t cache_size_bytes;
     uint64_t line_size_bytes;
     uint32_t associativity;
@@ -87,10 +89,36 @@ typedef struct CacheConfig {
 - Use C11.
 - Use 4 spaces for indentation.
 - Do not use tabs.
-- Keep braces on the same line for functions and control flow.
+- Put opening braces on their own line for functions, structs, enums, and control-flow blocks.
 - Prefer one declaration per line.
 - Include standard headers before project headers only when the standard types are needed by that header.
 - Keep comments sparse and useful.
+
+Use this brace style:
+
+```c
+int main(void)
+{
+    if (ready)
+    {
+        return 0;
+    }
+
+    return 1;
+}
+```
+
+Do not use this style:
+
+```c
+int main(void) {
+    if (ready) {
+        return 0;
+    }
+
+    return 1;
+}
+```
 
 ## Build Expectations
 

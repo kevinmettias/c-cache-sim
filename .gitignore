@@ -1,8 +1,14 @@
 build/
+build-coverage/
 cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
 Testing/
+compile_commands.json
+*.gcda
+*.gcno
+*.gcov
+coverage.info
 *.exe
 *.obj
 *.o

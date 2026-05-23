@@ -56,6 +56,14 @@ On Windows, use the MSYS2 helper scripts documented in [docs/local-dev.md](docs/
 powershell -ExecutionPolicy Bypass -File scripts\local-ci.ps1
 ```
 
+Additional local tooling:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\format.ps1
+powershell -ExecutionPolicy Bypass -File scripts\analyze.ps1
+powershell -ExecutionPolicy Bypass -File scripts\coverage.ps1
+```
+
 ## Intended Trace Format
 
 Each non-comment line is one memory operation:

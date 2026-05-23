@@ -1,4 +1,5 @@
 CC := cc
+CMAKE := cmake
 CFLAGS := -std=c11 -Wall -Wextra -Wpedantic -Werror -Iinclude
 LDFLAGS :=
 LDLIBS := -lcmocka
@@ -16,7 +17,7 @@ TEST_TRACE := $(BUILD_DIR)/test_trace
 all: $(APP)
 
 dirs:
-	@mkdir -p $(BUILD_DIR)
+	$(CMAKE) -E make_directory $(BUILD_DIR)
 
 $(APP): $(SRC) $(APP_SRC) | dirs
 	$(CC) $(CFLAGS) $(SRC) $(APP_SRC) -o $@ $(LDFLAGS)
