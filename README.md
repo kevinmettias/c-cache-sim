@@ -14,6 +14,10 @@ The project starts with:
 
 The starter scaffold intentionally leaves cache behavior unimplemented so the simulator logic can be built milestone by milestone.
 
+## Lab Handout
+
+The project lab guide is in [docs/lab.md](docs/lab.md). It explains the motivation, required background theory, ordered phases, deliverables, and completion checks without prescribing the implementation.
+
 ## Style
 
 This repo uses the C style documented in [docs/c-style-guide.md](docs/c-style-guide.md). The short version:
