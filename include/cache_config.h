@@ -4,7 +4,8 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-typedef struct CacheConfig {
+typedef struct CacheConfig
+{
     uint64_t cache_size_bytes;
     uint64_t line_size_bytes;
     uint32_t associativity;

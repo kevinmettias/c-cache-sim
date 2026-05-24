@@ -3,11 +3,13 @@
 #include <setjmp.h>
 #include <cmocka.h>
 
-static void Trace_Placeholder_Test(void **state) {
+static void Trace_Placeholder_Test(void** state)
+{
     (void)state;
 }
 
-int main(void) {
+int main(void)
+{
     const struct CMUnitTest tests[] = {
         cmocka_unit_test(Trace_Placeholder_Test),
     };

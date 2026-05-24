@@ -12,7 +12,8 @@ try {
         exit 0
     }
 
-    & $dev_env clang-format -i @files
+    $command = @("clang-format", "-i") + $files
+    & $dev_env -Command $command
     exit $LASTEXITCODE
 } finally {
     Pop-Location

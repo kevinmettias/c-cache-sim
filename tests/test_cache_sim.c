@@ -3,11 +3,13 @@
 #include <setjmp.h>
 #include <cmocka.h>
 
-static void CacheSim_Placeholder_Test(void **state) {
+static void CacheSim_Placeholder_Test(void** state)
+{
     (void)state;
 }
 
-int main(void) {
+int main(void)
+{
     const struct CMUnitTest tests[] = {
         cmocka_unit_test(CacheSim_Placeholder_Test),
     };

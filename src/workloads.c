@@ -1,1 +1,4 @@
-typedef int Workloads_Module;
+int Workloads_Module_Placeholder(void)
+{
+    return 0;
+}

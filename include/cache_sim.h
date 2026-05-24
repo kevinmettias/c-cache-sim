@@ -9,13 +9,14 @@
 
 typedef struct CacheSim CacheSim;
 
-CacheSim *CacheSim_Create(CacheConfig config);
-void CacheSim_Destroy(CacheSim *cache_sim);
+CacheSim* CacheSim_Create_And_Initialize(CacheConfig config);
+CacheSim* CacheSim_Create_And_Initialize_With_Stats(CacheConfig config, CacheStats stats);
+void CacheSim_Destroy(CacheSim* cache_sim);
 
-bool CacheSim_Read(CacheSim *cache_sim, uint64_t address);
-bool CacheSim_Write(CacheSim *cache_sim, uint64_t address);
+bool CacheSim_Read(CacheSim* cache_sim, uint64_t address);
+bool CacheSim_Write(CacheSim* cache_sim, uint64_t address);
 
-const CacheStats *CacheSim_Stats(const CacheSim *cache_sim);
-void CacheSim_Reset(CacheSim *cache_sim);
+const CacheStats* CacheSim_Stats(const CacheSim* cache_sim);
+void CacheSim_Reset(CacheSim* cache_sim);
 
 #endif
